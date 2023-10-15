@@ -1,0 +1,12 @@
+컬렉션🧬 기능 : 크기 자동조정/ 추가/ 수정/ 삭제/ 반복/ 순회/ 필터/ 포함확인 등….
+-Array배열과 비슷 (최초 길이를 알아야 함)
+-종류 : List, Set, Queue, Map
+ㄴList : 데이터 중복 허용
+ㄴQueue : F.I.F.O. (First in First out)
+ㄴSet : 순서가 없는 데이터의 집합 (데이터 중복 허용 안함)
+ㄴMap : (Key,Value)쌍으로 이루어진 데이터 집합 - Key로 Value찾는다. Key는 UNIQUE하다*****
+
+-기본형x 참조형 변수 사용
+Integer, Long, Double, String 등
+
+ArrayList<Integer> intList = new ArrayList<Integer>(); //선언 + 생성
