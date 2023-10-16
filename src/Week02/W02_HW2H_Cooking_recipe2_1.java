@@ -6,7 +6,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String CollectionName = sc.next();
+        String CollectionName = sc.nextLine();
         String title = sc.nextLine();
 
         switch (CollectionName) {
@@ -21,7 +21,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
                     }
                     strList.add(text);
                 }
-                title = "[ List로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ List로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 // strList를 한 줄 씩 출력
@@ -45,7 +45,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
 //                    lineNum = linNum +1;
                     strMap.put(lineNum++, text);
                 }
-                title = "[ Map로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ Map으로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 // strMap를 한 줄 씩 출력
@@ -68,7 +68,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
 //                    lineNum = linNum +1;
                     strSet.add(text);
                 }
-                title = "[ Set로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ Set으로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 Iterator iterator = strSet.iterator();

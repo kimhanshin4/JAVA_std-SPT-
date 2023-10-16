@@ -24,5 +24,3 @@ public class Arr04 {
         int[] b = Arrays.copyOf(a, a.length); // 배열과 함꼐 length값도 같이 넣어준다.
     }
 }
-
-컬렉션🧬 기능 : 크기 자동조정/ 추가/ 수정/ 삭제/ 반복/ 순회/ 필터/ 포함확인 등….

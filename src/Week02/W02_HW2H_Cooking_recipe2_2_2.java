@@ -21,7 +21,7 @@ public class W02_HW2H_Cooking_recipe2_2_2 {
                     }
                     strList.add(text);
                 }
-                title = "[ List로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ List로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 // strList를 한 줄 씩 출력
@@ -45,7 +45,7 @@ public class W02_HW2H_Cooking_recipe2_2_2 {
 //                    lineNum = linNum +1;
                     strMap.put(lineNum++, text);
                 }
-                title = "[ Map로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ Map으로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 // strMap를 한 줄 씩 출력
@@ -60,7 +60,7 @@ public class W02_HW2H_Cooking_recipe2_2_2 {
                 LinkedHashSet<String> strSet = new LinkedHashSet<>();
 
                 while (true) {
-                    // 한 줄 씩 입력 받아서 strSet에 저장하게끔
+                    // 한 줄 씩 입력 받아서 strMap에 저장하게끔
                     String text = sc.nextLine();
                     if (Objects.equals(text, "끝")) {
                         break;
@@ -68,7 +68,7 @@ public class W02_HW2H_Cooking_recipe2_2_2 {
 //                    lineNum = linNum +1;
                     strSet.add(text);
                 }
-                title = "[ Set로 저장된 " + title + " ]"; // 괄호로 감싸준 제목
+                title = "[ Set으로 저장된 ♡" + title + "♡ ]"; // 괄호로 감싸준 제목
                 System.out.println(title);
 
                 Iterator iterator = strSet.iterator();
@@ -81,7 +81,7 @@ public class W02_HW2H_Cooking_recipe2_2_2 {
                 break;
 
             // List, Map, Set 모두 아닐 경우
-            default :
+            default:
                 System.out.println("저장할 수 없는 자료구조입니다.");
         }
     }
