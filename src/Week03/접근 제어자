@@ -1,0 +1,47 @@
+제어자 => 클래스, 변수, 메서드의 선언부에 사용, 부가적인 의미 부여
+접근 제어자 : public, protected, default, private 폴더상에서 어디까지 접근 시킬 것이냐
+그 외 제어자 : static, final, abstract(추상) 상수 선언시
+
+접근제어자
+-외부에서의 접근 제한
+    ㄴ지정 안되있다면 default => 같은 패키지 내에서만 접근 가능
+-public : 접근제한 없음
+-protected : 같은 패키지 내, 다른 패키지의 자손클래스에서 접근 가능
+-default : 같은 패키지 내에서만
+-private : 같은 클래스 내에서만
+ㄴpublic, private를 회사 전까지 제일 많이 사용할 듯
+
+클래스 : public, default
+메서드 & 멤버변수 : public, protected, default, private
+지역변수 : x
+
+접근 제어자를 이용한 캡슐화(은닉성)
+-클래스 내부의 선언된 데이터 보호
+-유효값 유지, 함부로 변경 못하도록 제한
+생성자의 접근 제어자
+-클래스의 접근 제어자와 일치
+-생성자에 접근 제어자를 사용함으로 인스턴스의 생성 제한
+
+Getter & Setter ***** = 캡슐화를 인지하면서 생각하자
+-객체의 무결성, 변경 없는 상태 유지를 위한 해결방법
+-직접적인 값의 조회, 세팅 방지
+-하나하나의 필드마다 Getter&Setter 존재
+    ㄴex)brivate boolean lights => get lights, set lights 존재
+
+Getter 얻다
+-외부에서 객체의 private한 필드를 읽을 필요가 있을 때 Getter 메서드 사용
+-필드는 private이지만 getter메서드는 public으로 두어 리턴 전 가공 등 작업
+-get + 필드이름(camelCase로)
+
+Setter 수정하다
+-외부에서 객체의 private 필드를 저장/수정할 때 Setter메서드 사용.
+-Getter와 같이 private필에서 Setter 메서드를 통해
+-set + 필드이름(camelCase로)
+
+제어자 사용시 주의 사항
+- 메서드에 static과 abstract를 함께 사용할 수 없다.
+- 클래스에 abstract와 final을 동시에 사용할 수 없다.
+- abstract메서드의 접근 제어자가 private일 수 없다.
+메서드에 private와 final을 같이 사용할 필요는 없다.
+
+
