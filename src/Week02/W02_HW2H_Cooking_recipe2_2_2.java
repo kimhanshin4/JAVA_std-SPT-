@@ -2,11 +2,11 @@ package Week02;
 
 import java.util.*;
 
-public class W02_HW2H_Cooking_recipe2_1 {
+public class W02_HW2H_Cooking_recipe2_2_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String CollectionName = sc.next();
+        String CollectionName = sc.nextLine();
         String title = sc.nextLine();
 
         switch (CollectionName) {
@@ -60,7 +60,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
                 LinkedHashSet<String> strSet = new LinkedHashSet<>();
 
                 while (true) {
-                    // 한 줄 씩 입력 받아서 strMap에 저장하게끔
+                    // 한 줄 씩 입력 받아서 strSet에 저장하게끔
                     String text = sc.nextLine();
                     if (Objects.equals(text, "끝")) {
                         break;
@@ -80,7 +80,7 @@ public class W02_HW2H_Cooking_recipe2_1 {
                 }
                 break;
 
-                // List, Map, Set 모두 아닐 경우
+            // List, Map, Set 모두 아닐 경우
             default :
                 System.out.println("저장할 수 없는 자료구조입니다.");
         }
