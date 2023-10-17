@@ -1,4 +1,4 @@
-package Week03.CalculatorF2;
+package Week03.HW.HWCalculatorSimpleFolder;
 
 public class Calculator_Simple {
     public double calculate (String operator, int firstNum, int secondNum) {

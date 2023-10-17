@@ -1,4 +1,4 @@
-package Week03.CalculatorFolder;
+package Week03.HW.HWCalculatorFolder;
 
 public class AddOper extends AbsOper {
     @Override

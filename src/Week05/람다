@@ -1,0 +1,27 @@
+(1)Thread Main.java에서 Thread 상속받아와 실행
+
+public class Thread "extends" Thread {
+    @Override
+    public void run() { }
+    }
+
+
+(2)Runnable Main.java에서 Runnable 상속받아와 실행
+
+public class Thread "implements" Runnable {
+    @Override
+    public void run() { }
+    }
+
+
+(3)Lambda
+
+Runnable task = () -> {
+    식
+    }
+
+    Thread thread1 = new Thread(task);
+    thread1.setName("thread1")
+    Thread1.start();
+ㄴ//걸리는 시간이나, 동작을 예측할 수 없다.
+ㄴ//운영체제, 성능에 따라 다르다.

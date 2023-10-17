@@ -1,4 +1,4 @@
-package Week03.CalculatorF2;
+package Week03.HW.HWCalculatorSimpleFolder;
 
 public class Main {
     public static void main(String[] args) {

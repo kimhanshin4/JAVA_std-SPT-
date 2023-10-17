@@ -1,0 +1,12 @@
+참조형 Wrapper 객체
+기본형 타입이 가지고 있는 기능을 조금더 개선시켜서 여러 기능을 추가함
+-원시타입을 추상화 시켜따!
+왜 그럼 Wrapper 로 다 안쓰냐 => 성능이슈 ㅠㅠ
+-추상적 기능을 사용할 때 사용.
+기본형->객체화 => 언박싱
+ex)
+Integer num = new Integer(17); //Boxing
+int n = num.intValue(); // 언빠씽~
+JDK1.5 이후 =>
+Character ch = 'x'; // AutoBoxing
+char c = ch; // Auto언빠씽~
