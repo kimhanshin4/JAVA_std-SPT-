@@ -1,0 +1,32 @@
+다형성
+ㄴ자동형변환
+
+-부모 클래스로 자식 클래스 타입의객체 생성 가능
+-자식 클래스로 부모 클래스 타입의객체 생성시 강제 형변환 (int)var
+    ㄴ자동 형변환 완료된 객체들만 돌아갈 수 있다?
+
+-여러가지 형태를 가질 수 있는 능력
+
+instanceof
+클래스명 체크 => 어떠한 인스턴스가 어떤 클래스였는지 어떤 클래스의 설계도였는지 확인
+
+ex)
+public class Main {
+    public static void main(String[] args) {
+
+        Parent pc = new Child();  // 다형성 허용 (자식 -> 부모)
+
+        Parent p = new Parent();
+
+        System.out.println(p instanceof Object); // true 출력 => Object는 최상단 클래스로 무조건 True
+        System.out.println(p instanceof Parent); // true 출력
+        System.out.println(p instanceof Child);  // false 출력
+
+        Parent c = new Child();
+
+        System.out.println(c instanceof Object); // true 출력
+        System.out.println(c instanceof Parent); // true 출력
+        System.out.println(c instanceof Child);  // true 출력
+
+    }
+}
