@@ -2,7 +2,7 @@ package JAVA_std.Week05.group;
 
 public class Main {
     public static void main(String[] args) {
-        Runnable task = () -> {
+        Runnable task = () -> { // (5) (4)가 진행되는 동안 반복
             while (!Thread.currentThread().isInterrupted()) {
                 try {
                     Thread.sleep(1000);
@@ -14,30 +14,31 @@ public class Main {
             System.out.println(Thread.currentThread().getName() + " Interrupted");
         };
 
-        // ThreadGroup 클래스로 객체를 만듭니다.
+        // ThreadGroup 클래스로 객체를 만듭니다.=> 그룹 생성후 스레드를 할당하는 방식
         ThreadGroup group1 = new ThreadGroup("Group1");
 
         // Thread 객체 생성시 첫번째 매개변수로 넣어줍니다.
         // Thread(ThreadGroup group, Runnable target, String name)
         Thread thread1 = new Thread(group1, task, "Thread 1");
         Thread thread2 = new Thread(group1, task, "Thread 2");
+        // Thread 생성자가 여러개
 
         // Thread에 ThreadGroup 이 할당된것을 확인할 수 있습니다.
-        System.out.println("Group of thread1 : " + thread1.getThreadGroup().getName());
+        System.out.println("Group of thread1 : " + thread1.getThreadGroup().getName()); // (1) 멀티스레드 출력
         System.out.println("Group of thread2 : " + thread2.getThreadGroup().getName());
 
-        thread1.start();
+        thread1.start(); // (2) 스타트
         thread2.start();
 
         try {
             // 현재 쓰레드를 지정된 시간동안 멈추게 합니다.
-            Thread.sleep(5000);
+            Thread.sleep(5000); // (3) 5초동안 멈췄다가 진행
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         // interrupt()는 일시정지 상태인 쓰레드를 실행대기 상태로 만듭니다.
-        group1.interrupt();
+        group1.interrupt(); // (4) 호출
 
     }
 }
