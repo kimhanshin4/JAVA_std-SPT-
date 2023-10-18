@@ -14,8 +14,11 @@ public class Main {
 
         // 가게 점원
         Runnable StoreClerk = () -> {
-            while (true) {
+            while (true) { //true => while문 무한 반복 *오류발생하기전까진
+                // ↓ 0~4 사이의 정수 중, Random한 값을 뽑아내기 위함
                 int randomItem = (int) (Math.random() * MAX_ITEM);
+
+                // restock : 재고를 넣는 메서드
                 appleStore.restock(itemList[randomItem]);
                 try {
                     Thread.sleep(50);
@@ -33,6 +36,8 @@ public class Main {
                 }
 
                 int randomItem = (int) (Math.random() * MAX_ITEM);
+
+                //sale : 판매하는 메서드
                 appleStore.sale(itemList[randomItem]);
                 System.out.println(Thread.currentThread().getName() + " Purchase Item " + itemList[randomItem]);
             }

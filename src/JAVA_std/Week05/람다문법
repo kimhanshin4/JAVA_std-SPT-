@@ -1,0 +1,29 @@
+// 기본적으로 문법은 다음과 같습니다.
+(파라미터 값, ...) -> { 함수 몸체 }
+
+( )->{   }
+
+// 아래의 함수 두개는 같은 함수입니다.
+// 이름 반환타입, return문 여부에 따라 {}까지도 생략이 가능합니다. ex)return 작성줄이 한 줄일 때
+public int toLambdaMethod(int x, int y) {
+	return x + y;
+}
+
+(x, y) -> x + y
+(x, y) -> {
+    return x + y;
+}
+
+// 이런 함수도 가능하겠죠?
+public int toLambdaMethod2() {
+	return 100;
+}
+
+() -> 100
+
+// 모든 유형의 함수에 가능합니다.
+public void toLambdaMethod3() {
+	System.out.println("Hello World");
+}
+
+() -> System.out.println("Hello World")

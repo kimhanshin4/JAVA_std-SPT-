@@ -1,0 +1,29 @@
+sync 블럭으로 동기화 => 자동적으로 Lock이 걸리고 풀리고.
+ㄴ같은 메서드 내에서만 Lock을 걸 수 있다.
+=> 이러 제약을 해결을 위해 Lock클래스 사용.
+
+ReentrantLock
+-재진입 가능한 Lock, 가장 일반적이 베타 Lock, 재진입이 가능하다
+-특정 조건에서 Lock을 풀고, 나중에 다시 Lock을 얻어 임계역역으로 진입 가능
+ex) 메서드A, B 둘 다 sync이고 lock을 가지고 서로에게 진입하려고 할 때,
+ ㄴ한 쪽이 락을 들고 다른 한쪽으로 진입하면, 나머지 한 쪽도 락을 가지고 있기에 서로 무한정 대기하는 Dead Lock 발생.
+ ㄴ이 때  ReentrantLock을 사용하면 같은 스레드가 이미 락을 가지고 있어도 락을 유지하며 계속 실행할 수 있다.
+ =>데드락x, 코드의 유연성↑
+
+ReentrantReadWriteLock
+-읽기를 위한 Lock, 쓰기를 위한 Lock 따로 제공
+-읽기 Lock이 걸려있는 상태에서 쓰기 Lock을 걸진 못한다.(데이터 변경 방지)
+
+StampedLock
+-낙관적인 Lock : 데이터를 변경 할 때만 Lock기능
+=>작업속도는 빠름 but, 여러 스레드가 동시에 어떠한 변경을 할 땐 적합하지 않다.
+
+
+Condition인터페이스
+ㄴwait(),notify()의 문제점 : waiting pool 내 스레드를 구분하지 못한다는 점을 해결
+-특정 스레드를, 특정 조건을 만족할 때 깨우도록 할 수 있음.
+-ReentrantLock 클래스와 같이 사용됨.
+ㄴwait,notify대신 await(),signal()을 사용.
+-condition1과 condition2를 직접 생성함으로 waiting pool 내 실행대기 스레드 리스트 중,
+ㄴ특정 조건에 맞는 스레드를 깨울 수 있는 것.
+=>ex) condition1.await() & condition2.signal();
