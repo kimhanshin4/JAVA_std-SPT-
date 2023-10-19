@@ -1,4 +1,4 @@
-(1)Thread Main.java에서 Thread 상속받아와 실행
+(1)Thread Main.java에서 Thread를 상속받아와 실행
 
 public class Thread "extends" Thread {
     @Override

@@ -4,7 +4,7 @@
 ( )->{   }
 
 // 아래의 함수 두개는 같은 함수입니다.
-// 이름 반환타입, return문 여부에 따라 {}까지도 생략이 가능합니다. ex)return 작성줄이 한 줄일 때
+// 이름 반환타입, return문 여부에 따라 {}까지도 생략이 가능 합니다. ex)return 작성줄이 한 줄일 때
 public int toLambdaMethod(int x, int y) {
 	return x + y;
 }

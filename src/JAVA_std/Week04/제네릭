@@ -1,12 +1,12 @@
 Generic : generalized(일반화된), genetic(유전적인)
 JAVA = 타입의 논리로 동작, 안정성
-ㄴ그래도 좀 더 간편하게 사용할 수 없을까? => Generic!
+ㄴ킹치만 좀 더 간편하게 사용할 수 없을까? => Generic!
 
 ex) public class Generic<T> {} // 제네릭 클래스. T=타입 변수
 <Type> 이라고 써도 되지만, 개발자들의 암묵적인 룰 느낌s? T, U, V, E
 -Generic 클래스는 원시 타입
 
-Generic의 제한점
+Generic의 제한점 ?
 -static 멤버들은 제네릭 사용 불가
 =>타입 변수는 인스턴스 변수로 간주,
 -제네릭 배열도 x

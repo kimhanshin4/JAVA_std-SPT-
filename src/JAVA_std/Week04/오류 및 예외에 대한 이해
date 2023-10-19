@@ -8,6 +8,7 @@
 예외(Exception) : 일반적으로 회복이 가능
 - 미리 예상할 수 있다. => 대응 할 수 있다.
 - 예외를 사전에 처리 할 수 있는 로직을 심어 놓아 예방한다.
+ㄴ(try, catch, finally), throw 출동
 
 컴파일 에러
 - .java => .class 파일로 컴파일 할 때 발생
@@ -24,7 +25,7 @@
     -반드시 예외 처리를 해줘야하는 예외
     -이미 특정 문제를 인지하고 있어, 예외 정의 => 컴파일 하는 동안 예외처리 됬는지 Check
 -미확인된 예외 (Unchecked Exception)
-    -런타임 시점에 확인됨
+    -런타임 시점에 확인됨 -> 작성시 몰라가지고~
     -예외 처리가 반드시 필요하지 않은 예외
 
 프로그래밍 중 "문제" 상황에 직면,
@@ -42,7 +43,7 @@ Object<-Throable<-Error_IOError,Exception_IOException,RuntimeException...
     ㄴ상속안한 예외들 => Checked Exception
 
 
-NullPointException *****
+NullPointException ***** Null ㅡㅡ
 ArrayIndexOutOfBoundsException.***** 많이 본다.
 NumberFormatException
 
@@ -66,19 +67,19 @@ Chained Exception, 실제 예외 처리하는 방법
 -checked exception=>try~catch~finall=>길다
 =>unchecked exception=>감싸지 않음
 =>unchecked로 checked를 감싼다(포장)
-=>코드가 간결해진다.
+=>코드가 간결해진다. =>모두가 행복해진다.
 ex) throw new RuntimeException(new Exception)
 initCause해준 내용을 getCause로 잡는다.
 
-원인에대한 이해가 편하다. => tracking 용이
+원인에 대한 이해가 편하다. => tracking 용이
 
-실질적으로 예외 처리
+실질적으로 예외 처리 방안들
 1. 예외 복구 => 최소한의 대응만 가능 => 가장 기본적, 대게 복구 가능상황이 아닌경우가 많다
 2. 예외 처리 회피. 내 차례에서 흘리고 다음 로직에서 처리되도록
 3. 예외 전환. A예외를 B예외로 전환
 ㄴ적절하다. 예외처리를 깊게 자세히 처리할 수 있다.
 ㄴRuntimeException 처럼 일괄 처리하기 편한 예외로 바꿔서 던지고 싶을 때 사용
 
-원인 예외를 다루기 위한 메서드
+원인 예외를 다루기 위한 메서드 ?
 - initCause()
 - getCause()

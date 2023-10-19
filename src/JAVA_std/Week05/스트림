@@ -1,19 +1,19 @@
-스트림
+스트림 stream()
 -흐름
--리스트, 맵, 셋 등의 흐름을 객체로 제공, 그 흐름동안 메서드들을 api로 제공
+-리스트, 맵, 셋 등의 흐름을 객체로 제공, 그 흐름 동안 메서드들을 api로 제공
 -원본 데이터를 변경하지 않는다.
 ㄴ새로운 배열, 새로운 set등을 추출
 -map, filter, forEach... 등등
 -일회용= 한 번 사용 후 어디에도 남지 않음
 
--모든 컬레션을 상속하는 구현체들은 스트림을 반환 할 수 있다
+-모든 컬렉션을 상속하는 구현체들은 스트림을 반환 할 수 있다
 -ex) 받아온 list.stream()
         // 그 list에 구현된 filter()메서드 사용?
         // filter메서드는 함수를 파라미터로 전달 받는다.
         // list의 함수 -> exㄴ) 비가 내리면 true를 반환
         // filter() 메서드는 true가 아닌 값을 반환한 스트림의 원소들을 제거. exㄴ)hot,sunny,windy...
         // .filter((Weather weather)-> weather.getStat().equals("Rain"))
-                                        //ㄴ=>... { return weather.get~~~() } ...
+                                        //ㄴ=>... { return weather.get~~~() } ...?
         // 이 결과도 반환을 받아 다시 리스트로 묶어준다.
         .toList();
 

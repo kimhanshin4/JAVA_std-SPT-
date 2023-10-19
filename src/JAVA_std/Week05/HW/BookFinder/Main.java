@@ -24,6 +24,47 @@ public class Main {
                 new Book(16L, "정하준의 경제학 레시피", "장하준", "경제", 16200),
                 new Book(17L, "레버리지", "롭 무어", "경제", 16200)
         );
+
+        // (1) 카테고리가 여행이 책의 목록 조회
+//        bookList.stream()
+//                .filter(book -> book.getCategory().equals("여행"))
+//                .forEach(f -> System.out.println("카테고리가 여행인 책들 제목: " + f.getBookName()));
+//        System.out.println();
+
+//         (2) 가격이 16200원 이하인 책의 목록 조회
+//        bookList.stream()
+//                .filter(book -> book.getPrice() <= 16200)
+//                .forEach(f -> System.out.println("가격이 16200원 이하인 책들 제목: " + f.getPrice()));
+
+        // (3) 책 제목에 "경제" 라는 용어가 들어간 책들 제목
+//        bookList.stream()
+//                .filter(book -> book.getBookName().contains("경제"))
+//                .forEach(f -> System.out.println("책 제목에 '경제' 라는 용어가 들어간 책들 제목:" + f.getBookName()));
+
+        // (4) 가격이 가장 비싼 책의 가격 조회
+//        double maxPrice = bookList.stream().mapToDouble(Book::getPrice)
+//                .max().getAsDouble();
+//        System.out.println("목록에 있는 책들의 가격들 중 가장 비싼 금액:" + maxPrice + "원");
+
+        // (5) 카테고리가 IT인 책들의 가격 합 조회
+//        double sum = bookList.stream().filter(book -> book.getCategory().equals("IT"))
+//                .mapToDouble(Book::getPrice)
+//                .sum();
+//        System.out.println("카테고리가 IT인 책들의 가격 합: " + sum + "원");
+
+        // (6) 책 할인 이벤트
+        // 카테고리가 IT 인 책들의 가격을 40% 할인한 새로운 책 리스트 만들기, discountedBookList
+        List<Book> discountedBookList = bookList.stream()
+                .filter(book -> book.getCategory().equals("IT")) // 간단 (book -> {}생략 )
+                .map(mappedBook -> {                         // 내에 함수 (mappedBook -> {함수})
+                    mappedBook.setPrice(mappedBook.getPrice() * 0.6);
+                    return mappedBook;
+                }).toList();
+        for (Book book: discountedBookList) {
+            System.out.println("할인된 책 제목: " + book.getBookName());
+            System.out.println("할인된 책 가격: " + book.getPrice() + "원");
+            System.out.println();
+        }
     }
 }
 
