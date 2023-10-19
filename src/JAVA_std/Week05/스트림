@@ -1,0 +1,35 @@
+스트림
+-흐름
+-리스트, 맵, 셋 등의 흐름을 객체로 제공, 그 흐름동안 메서드들을 api로 제공
+-원본 데이터를 변경하지 않는다.
+ㄴ새로운 배열, 새로운 set등을 추출
+-map, filter, forEach... 등등
+-일회용= 한 번 사용 후 어디에도 남지 않음
+
+-모든 컬레션을 상속하는 구현체들은 스트림을 반환 할 수 있다
+-ex) 받아온 list.stream()
+        // 그 list에 구현된 filter()메서드 사용?
+        // filter메서드는 함수를 파라미터로 전달 받는다.
+        // list의 함수 -> exㄴ) 비가 내리면 true를 반환
+        // filter() 메서드는 true가 아닌 값을 반환한 스트림의 원소들을 제거. exㄴ)hot,sunny,windy...
+        // .filter((Weather weather)-> weather.getStat().equals("Rain"))
+                                        //ㄴ=>... { return weather.get~~~() } ...
+        // 이 결과도 반환을 받아 다시 리스트로 묶어준다.
+        .toList();
+
+1. 스트림 받아오기 (.stream())
+    weatherCountry.stream()
+2. 스트림 가공하기
+    .filter((Weather weather) -> weather.getCountry().equals("Rain"))
+    //or map
+3. 스트림 결과 만들기
+    .toList();
+
+filter() : 조건에 맞는 것만 반환
+map() : 모든 요소를 가공해 반환. 마찬가지로 일회성
+    ㄴex) ArrayList [1,2,3,4,5] 를 이용해 [2,3,6,8,10] 를 받고 싶을 때
+
+forEach() : 반환하는게 아닌 내부에서 로직을 수행하게 함
+-> .forEach(System.out::println);
+    ㄴ리스트 안 요소를 하나하나 접근하면서 리스트에 맞는 처리들을 하나씩 함.
+

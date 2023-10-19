@@ -1,0 +1,33 @@
+Null 은 1조원 짜리 실수다!
+-null이라는 "개념"이 존재하기 때문에, 거의 모든 상황에 null point exception이 발생 할 수 있음을 경계해야한다.
+
+로직에 대한 결과로 null값이 들어오면 print할 때 null을 참조
+=>runtime에서 NullPointException이 발생
+
+문제) 논리적, 환격적으로도 null이 반환될 여지가 있음에도 명시하지 않았다.
+
+null 체크를 하지 않는다면 시스템은 위험에 빠진다.
+
+null값을 출력하는 일이 없도록
+
+Optional 클래스
+제네릭 타입으로 전환 => java.util.Optional객체
+-값이 null 인 Optional 생성
+    ex) Optional<Weather> emptryOptional = Optional.empty();
+-값이 있는 Optional 생성
+    ex) Optional<Weather> hasDataOptional = Optional.of(new Weather());
+-값이 있을 수도 없을 수도 있는 Optional 생성
+    ex) Optional<Weather> hasDataOptional = Optional.ofNullable(getWeatherFromDB());
+-Optional 객체 사용하기(값 받아오기)
+    ex) Optional<String> weatherName = getWeatherNameFromDB();
+    //예시코드 orElse()를 통해 값을 받아옴. 파라미터()로는 null인 경우 반환 값 작성.
+    String realWeatherName = weatherName.orElse("NoWeather");
+    //실사용
+    String weatherName = getWeatherNameFromDB().orElse("NoWeather");
+
+    //orElseGet() 메서드를 사용할 수 도 있다.
+    //파라미터로는 없는 경우 실행될 함수 전달.
+    Weather weather = getWeatherNameFromDB().orElseGet(Car::new);//네이밍을 한 function함수가 파라미터에 들어옴
+    //값이 없어서 그 아래 로직을 수행하는데 큰 장애가 되는 경우, 예외를 발생 시켜 넘겨줌
+    Weather weather = getWeatherNameFromDB()
+                        .orElseThrow(() -> new WeatherNotFoundException("NO Weather!"); //람다로 익명함수를 넘겨줌
