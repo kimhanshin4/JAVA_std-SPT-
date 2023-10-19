@@ -52,8 +52,8 @@ public class Main {
 //                .sum();
 //        System.out.println("카테고리가 IT인 책들의 가격 합: " + sum + "원");
 
-        // (6) 책 할인 이벤트
-        // 카테고리가 IT 인 책들의 가격을 40% 할인한 새로운 책 리스트 만들기, discountedBookList
+//         (6) 책 할인 이벤트
+//         카테고리가 IT 인 책들의 가격을 40% 할인한 새로운 책 리스트 만들기, discountedBookList
         List<Book> discountedBookList = bookList.stream()
                 .filter(book -> book.getCategory().equals("IT")) // 간단 (book -> {}생략 )
                 .map(mappedBook -> {                         // 내에 함수 (mappedBook -> {함수})
