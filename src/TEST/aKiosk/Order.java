@@ -1,8 +1,4 @@
-package HW.aKiosk;
-
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+package TEST.aKiosk;
 
 public class Order {
     private String orderSelection;

@@ -1,0 +1,34 @@
+화면배열
+
+        while(화면이 출력중){
+        nextLine();
+        switch(1~n 중 선택){
+        case 1:화면배열(n1);
+        break;
+        case 2:화면배열(n2);
+        break;
+        }
+        }
+
+
+        while(nextLine으로 받을 값이!=종료값ex)(0)){
+
+        switch(1~n 중 선택){
+        case 1:화면배열(n1);=>
+        break;
+        case 2:화면배열(n2);
+        break;
+        }
+        }
+
+        String a = nextLine();
+
+        while (true) {
+            nextLine();
+            if (입력값==종료값) {
+                break;
+                if (입력값==n) {
+                print(screen n;
+                }
+            }
+        }
