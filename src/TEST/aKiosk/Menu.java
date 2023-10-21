@@ -35,9 +35,9 @@ public class Menu {
     public String getIngredients() {
         return ingredients;
     }
+
     public void printMenuInfo() {
         System.out.println(this.menuId + this.menuName + this.price + this.coinName +this.ingredients);
     }
-
 
 }

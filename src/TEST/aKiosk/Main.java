@@ -24,92 +24,23 @@ public class Main {
         int selectNum3;
         int selectNum4;
 
-        System.out.println("빌보네 버거집에 오신걸 환영합니다♬");
-        System.out.print("1.주문하기");
-        System.out.print("  ");
-        System.out.println("2.주문확인");
-
         Scanner sc = new Scanner(System.in);
         selectNum = Integer.parseInt(sc.nextLine());
 
-//        String select
-//        switch (selectNum) {
-//            case 1:
-//                for (int i = 0; i < menuList.size(); i++) {
-//                    menuList.get(i).printMenuInfo();
-//                }
-//
-//        }
-        // 메뉴 출력
-        if (selectNum == 1) {
-            for (int i = 0; i < menuList.size(); i++) {
-                menuList.get(i).printMenuInfo();
-            }
-        } else if (selectNum == 0) {
+        boolean trigger = false;
 
-        }
-        System.out.print("번호를 눌러 장바구니에 담아주세요.");
-        System.out.print("  ");
-        System.out.println("0.주문취소");
+        while (!trigger) {
+            if (selectNum == 1) {
 
-        selectNum2 = Integer.parseInt(sc.nextLine());
-
-        switch (selectNum2) {
-            case 1: {
-                menuList.get(0).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 2: {
-                menuList.get(1).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 3: {
-                menuList.get(2).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 0: {
+                for (int i = 0; i < menuList.size(); i++) {
+                    menuList.get(i).printMenuInfo();
+                }
+            } else if (selectNum == 0) {
 
             }
+            break;
         }
 
-        selectNum3 = Integer.parseInt(sc.nextLine());
-
-        if (selectNum3 == 1) {
-            for (int i = 0; i < menuList.size(); i++) {
-                menuList.get(i).printMenuInfo();
-                System.out.println("4.장바구니확인하기  5.주문취소");
-            }
-        } else if (selectNum3 == 0) {
-
-        }
-        selectNum4 = Integer.parseInt(sc.nextLine());
-
-        switch (selectNum4) {
-            case 1: {
-                menuList.get(0).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 2: {
-                menuList.get(1).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 3: {
-                menuList.get(2).printMenuInfo();
-                orderSelect.get(0).printOrderInfo();
-                break;
-            }
-            case 4: {
-                //장바구니확인
-            }
-            case 0: {
-                //주문취소
-            }
-        }
 
 
     }
