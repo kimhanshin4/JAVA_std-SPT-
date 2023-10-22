@@ -26,7 +26,8 @@ public class Car {
     //gasPedal
     //input : kmh
     //output : speed
-    double gasPedal(double kmh) {
+    double gasPedal(double kmh, char type) {
+        changeGear(type); // 내부 메서드 호출!
         speed = kmh;
         return speed;
     }
@@ -50,7 +51,7 @@ public class Car {
     //onOffLight
     //input : x
     //output : lights boolean
-    boolean onOffLight () {
+    boolean onOffLights () {
         lights = !lights;
         return lights;
     }
@@ -60,5 +61,12 @@ public class Car {
     //output : x
     void horn () {
         System.out.println("뛰ㅣㅣㅣ");
+    }
+
+    //자동차의 속도 ... 가변길이 메서드
+    void carSpeeds(double ... speeds) {
+        for (double v : speeds) {
+            System.out.println("v = " + v);
+        }
     }
 }
