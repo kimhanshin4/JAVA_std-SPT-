@@ -4,17 +4,17 @@ public class Car {
     //<필드>
     //1) 고유 데이터 영역
     String company;
-    String model;
+    String model = "Lamborguini";
     String color;
     double price;
 
     //2) 상태 데이터 영역
     double speed;
     char gear;
-    boolean lights;
+    boolean lights = true;
 
     //3) 객체 데이터 영역
-    Tire tire;
+    Tire tire = new Tire(); //하위 클래스 Tire를 가져와 변수 tire에 할당 => 인스턴스화 => 사용가능
     Door door;
     Handle handle;
 
