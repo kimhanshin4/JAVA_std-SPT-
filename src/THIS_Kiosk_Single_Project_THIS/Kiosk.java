@@ -1,4 +1,4 @@
-package Kiosk_Single_Project;
+package THIS_Kiosk_Single_Project_THIS;
 
 import Practice.Kiosk.Menu;
 import Practice.Kiosk.Product;
