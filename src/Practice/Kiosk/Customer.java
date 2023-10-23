@@ -14,6 +14,8 @@ public class Customer {
         kiosk.selectCategory(selectNum);
         kiosk.showSelectCategory();
 
+        selectNum = Integer.parseInt(sc.nextLine());
+
     }
 
 
