@@ -1,4 +1,4 @@
-package TEST.aKiosk;
+package Practice.aKiosk;
 
 public class Menu {
     private int menuId;

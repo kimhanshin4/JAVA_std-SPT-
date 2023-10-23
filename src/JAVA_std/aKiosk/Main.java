@@ -1,4 +1,4 @@
-package TEST.aKiosk;
+package Practice.aKiosk;
 
 import java.util.Arrays;
 import java.util.List;
