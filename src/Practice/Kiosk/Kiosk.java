@@ -33,6 +33,7 @@ public class Kiosk {
     public void show() {
         System.out.println("1. 각종 햄버거");
         System.out.println("2. 시원한 생맥주");
+        System.out.println("3. 장바구니 확인하기");
         System.out.println("원하시는 메뉴를 선택해주세요!");
 
 //        if (selectNum == 1) {
@@ -42,7 +43,7 @@ public class Kiosk {
 //        }
     }
 
-   )
+
 
     public void selectCategory(int customerSelectNumber) {
         this.selectCategory = customerSelectNumber;
@@ -64,7 +65,7 @@ public class Kiosk {
             for (int i = 0; i < burgerList.size(); i++) {
                 burgerList.get(i);
                 System.out.print((i + 1) + ". ");
-                System.out.println(burgerList.get(i).getName());
+                System.out.println(burgerList.get(i).getName() + " | " + burgerList.get(i).getprice() + " | " + burgerList.get(i).getDescription());
 
             }
         } else if (selectCategory == 2) {
@@ -77,38 +78,38 @@ public class Kiosk {
 //                System.out.print(x);
 //                System.out.println(p.getName() + p.getprice() + p.getDescription());
 //                x = x + 1;
-            } else if (selectCategory == 3) {
-                //장바구니 내용
-            } else {
-                System.out.println("잘못누르셨습니다. 다시 선택해주세요.");
             }
-//        System.out.println("4.장바구니확인하기  5.주문취소");
-        }
-
-        public void printBurgerList () {
-            for (int i = 0; i < menuList.size(); i++) {
-                burgerList.get(i);
-                System.out.println("4.장바구니확인하기  5.주문취소");
-            }
-        }
-
-        public void printBurgerInfo () {
-//        System.out.println(Kiosk(int ID, String name, ));
-        }
-
-        public List<Product> getBurgerList () {
-            return burgerList;
-        }
-
-        public List<Product> getDrinkList () {
-            return drinkList;
-        }
-
-        public List<Menu> getMenuList () {
-            return menuList;
-        }
-
-        public List<Menu> getOrderList () {
-            return orderList;
+        } else if (selectCategory == 3) {
+            //장바구니 내용
+        } else {
+            System.out.println("잘못누르셨습니다. 다시 선택해주세요.");
         }
     }
+
+    public void printBurgerList() {
+        for (int i = 0; i < menuList.size(); i++) {
+            burgerList.get(i);
+            System.out.println("4.장바구니확인하기  5.주문취소");
+        }
+    }
+
+    public void printBurgerInfo() {
+//        System.out.println(Kiosk(int ID, String name, ));
+    }
+
+    public List<Product> getBurgerList() {
+        return burgerList;
+    }
+
+    public List<Product> getDrinkList() {
+        return drinkList;
+    }
+
+    public List<Menu> getMenuList() {
+        return menuList;
+    }
+
+    public List<Menu> getOrderList() {
+        return orderList;
+    }
+}

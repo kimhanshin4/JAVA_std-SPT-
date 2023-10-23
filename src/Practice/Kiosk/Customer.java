@@ -14,7 +14,7 @@ public class Customer {
         kiosk.selectCategory(selectNum);
         kiosk.showSelectCategory();
 
-        }
     }
+
 
 }
