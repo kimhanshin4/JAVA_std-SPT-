@@ -9,15 +9,12 @@ public class Customer {
 
         Scanner sc = new Scanner(System.in);
         int selectNum = 0;
+        selectNum = Integer.parseInt(sc.nextLine());
 
-        while (selectNum != 0) {
-            selectNum = Integer.parseInt(sc.nextLine());
-
-            kiosk.selectCategory(selectNum);
-            kiosk.showSelectCategory();
+        kiosk.selectCategory(selectNum);
+        kiosk.showSelectCategory();
 
         }
-
     }
 
 }

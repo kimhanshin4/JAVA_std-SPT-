@@ -8,8 +8,7 @@ public class Menu {
     private String name;
     private String description;
 
-    public Menu(int ID, String name, String description) {
-        this.ID = ID;
+    public Menu( String name, String description) {
         this.name = name;
         this.description = description;
     }

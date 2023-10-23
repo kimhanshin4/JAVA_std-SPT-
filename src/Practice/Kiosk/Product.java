@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class Product extends Menu {
     // 2. 객체가 가지고 있어야 할 속성(필드) 정의
     //<필드 영역>
-    private int ID;
     private String name;
     private double price;
     private String description;
@@ -17,17 +16,13 @@ public class Product extends Menu {
     // 처음 객체가 생성될 때(Instance화) 어떤 로 직을 수행해야 하며, 어떤 값이 필수로 들어와야 하는지 정의!
     //<생성자 영역>
 
-    public Product(int ID, String name, double price, String description) {
+    public Product( String name, double price, String description) {
         super();
-        this.ID = ID;
         this.name = name;
         this.price = price;
         this.description = description;
     }
 
-    public int getID() {
-        return ID;
-    }
 
     public String getName() {
         return name;
