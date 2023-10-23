@@ -47,6 +47,17 @@ public class Kiosk {
     public void selectCategory(int customerSelectNumber) {
         this.selectCategory = customerSelectNumber;
     }
+
+    public void showCategoryName() {
+        if (selectCategory == 1) {
+            System.out.println("맛있는 햄버거 메뉴입니다.");
+        } else if (selectCategory == 2) {
+            System.out.println("시원한 생맥주 메뉴입니다.");
+        } else if (selectCategory == 3) {
+            System.out.println("장");
+        }
+    }
+
     public void showSelectCategory() {
 
         if (selectCategory == 1) {
@@ -59,44 +70,45 @@ public class Kiosk {
         } else if (selectCategory == 2) {
             for (int i = 0; i < drinkList.size(); i++) {
                 drinkList.get(i);
-                System.out.print((i+1)+". ");
-                System.out.println(i+1);
+                System.out.print((i + 1) + ". ");
+                System.out.println(i + 1);
 //            int x = 0;
 //            for (Product p : drinkList) {
 //                System.out.print(x);
 //                System.out.println(p.getName() + p.getprice() + p.getDescription());
 //                x = x + 1;
+            } else if (selectCategory == 3) {
+                //장바구니 내용
+            } else {
+                System.out.println("잘못누르셨습니다. 다시 선택해주세요.");
             }
-        } else {
-            System.out.println("잘못누르셨습니다. 다시 선택해주세요.");
-        }
 //        System.out.println("4.장바구니확인하기  5.주문취소");
-    }
+        }
 
-    public void printBurgerList() {
-        for (int i = 0; i < menuList.size(); i++) {
-            burgerList.get(i);
-            System.out.println("4.장바구니확인하기  5.주문취소");
+        public void printBurgerList () {
+            for (int i = 0; i < menuList.size(); i++) {
+                burgerList.get(i);
+                System.out.println("4.장바구니확인하기  5.주문취소");
+            }
+        }
+
+        public void printBurgerInfo () {
+//        System.out.println(Kiosk(int ID, String name, ));
+        }
+
+        public List<Product> getBurgerList () {
+            return burgerList;
+        }
+
+        public List<Product> getDrinkList () {
+            return drinkList;
+        }
+
+        public List<Menu> getMenuList () {
+            return menuList;
+        }
+
+        public List<Menu> getOrderList () {
+            return orderList;
         }
     }
-
-    public void printBurgerInfo() {
-//        System.out.println(Kiosk(int ID, String name, ));
-    }
-
-    public List<Product> getBurgerList() {
-        return burgerList;
-    }
-
-    public List<Product> getDrinkList() {
-        return drinkList;
-    }
-
-    public List<Menu> getMenuList() {
-        return menuList;
-    }
-
-    public List<Menu> getOrderList() {
-        return orderList;
-    }
-}
