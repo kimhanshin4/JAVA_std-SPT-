@@ -97,7 +97,7 @@ public class Kiosk {
         return menuList;
     }
 
-    public List<Menu> getOrderList() {
+    public List<Order> getOrderList() {
         return orderList;
     }
 }
