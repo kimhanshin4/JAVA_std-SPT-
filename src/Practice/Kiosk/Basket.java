@@ -1,4 +1,5 @@
 package Practice.Kiosk;
 
-public class Main {
+public class Basket {
+
 }
