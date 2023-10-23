@@ -1,7 +1,5 @@
 package THIS_Kiosk_Single_Project_THIS;
 
-import Practice.Kiosk.Menu;
-
 // 1. 만들려고 하는 객체의 설계도.(클래스 선언)
 public class Product extends Menu {
     // 2. 객체가 가지고 있어야 할 속성(필드) 정의

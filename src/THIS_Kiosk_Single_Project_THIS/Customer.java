@@ -1,7 +1,5 @@
 package THIS_Kiosk_Single_Project_THIS;
 
-import Practice.Kiosk.Kiosk;
-
 import java.util.Scanner;
 
 public class Customer {
@@ -15,6 +13,8 @@ public class Customer {
 
         kiosk.selectCategory(selectNum);
         kiosk.showSelectCategory();
+
+        selectNum = Integer.parseInt(sc.nextLine());
 
     }
 
