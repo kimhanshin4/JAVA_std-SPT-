@@ -1,37 +1,43 @@
-화면배열
+GIT
+버전,형상 관리도구
+-형상 관리 도구 - SW의 변경사항을 기록하는 것
 
-        while(화면이 출력중){
-        nextLine();
-        switch(1~n 중 선택){
-        case 1:화면배열(n1);
-        break;
-        case 2:화면배열(n2);
-        break;
-        }
-        }
+ㄴ백업 및 팀원들과 공유 가능한 코드저장소
+=>협업가능
 
+깃 주요 명령어
+pwd - print working directory
+ls - list 현재 위치에있는 모든 파일, 폴더 리스트를 보여줌
+ls -a -숨겨진 폴더 포함 모두 보여줌
+ ㄴ-al 좀 더 길게 나옴
+mkdir <폴더명> -폴더 생성
+touch -현재 경로에서 파일 생성
+cd -화면 위치 변경
+.. -상위폴더로 이동
+git init - initialize -초기화
+ ㄴ프로젝트 마다 한 번씩
+git bash - 윈도우는 bash 먼저
+git add - 저장할 파일 지정
+git commit -실제 지정
+git add. - 자동으로 저장
+git status - 상태 확인
+git log - 기록 확인
+git push origin 'branch' -수정한 코드 저장소에 백업
+ ㄴgit add, commit으로 저장을 하고 올려줘야함
+git diff?
 
-    while(nextLine으로 받을 값이!=종료값ex)(0)){
-        switch(1~n 중 선택){
-            case 1:화면배열(n1);
-            break;
-            case 2:화면배열(n2);
-            break;
-            }
-    }
+git
+초대를 해줘야 같이 작업 및 수정 가능.
 
-    String a = nextLine();
+터미널 열고
+git clone '복사한 링크' 띄우고 .
+git add, commit
+git push origin main
 
-    while (true) {
-        nextLine();
-        if (입력값==종료값) {
-            break;
-            if (입력값==n) {
-            print(screen n;
-            }
-        }
-    }
+*git pull -GIT에서의 변경점을 불러오기
+pull 하고 push 하기
 
+*충돌나면 충돌메세지는 지워준다.
 ----------------------------------------------
     while (true) {
         메뉴판출력?
