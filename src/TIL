@@ -1,0 +1,23 @@
+    public void printSelectRoomView(Customer customer, Map<Integer, Room> roomList) {
+        System.out.println("--------------------------");
+        System.out.printf("[ 뇌정지 호텔 - %s님 ]\n", customer.getName());
+        System.out.println("예약하실 객실을 선택해 주세요.");
+
+        Iterator<Integer> iter = roomList.keySet().iterator();
+        while (iter.hasNext()) {
+            Integer key = iter.next();
+            int roomNum = roomList.get(key).getNumber();
+            RoomType roomType = roomList.get(key).getRoomType();
+            long roomCost = roomList.get(key).getCost();
+//            String roomStatus = roomList.get(key).isReserved() ? "예약완료" : "예약가능"; //
+            String roomStatus;
+            if (roomList.get(key).isReserved() == true) {
+                roomStatus = "예약완료";
+            } else {
+                roomStatus = "예약가능";
+            }
+            System.out.println(
+                key + ". " + roomNum + "호 | " + roomType + " | W" + roomCost + " | " + roomStatus);
+        }
+        System.out.println("0. 취소");
+    }

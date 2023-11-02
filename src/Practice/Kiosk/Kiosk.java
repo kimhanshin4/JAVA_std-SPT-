@@ -79,6 +79,9 @@ public class Kiosk {
             }
         } else if (selectCategory == 3) {
             System.out.println("장바구니 담긴 메뉴는 총 " + " 개 입니다.");
+            //결제를 원하시면 1,
+            //추가주문을 원하시면 2번을 눌러주세요
+            //입력 :
         } else {
             System.out.println("잘못누르셨습니다. 다시 선택해주세요.");
         }
