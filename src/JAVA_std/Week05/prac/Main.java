@@ -1,3 +1,5 @@
+package JAVA_std.Week05.prac;
+
 import java.util.*;
 
 public class Main {
